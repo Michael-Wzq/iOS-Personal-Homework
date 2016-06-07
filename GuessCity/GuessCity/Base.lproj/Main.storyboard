@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q9d-P7-Rtk">
+                                <rect key="frame" x="-4" y="112" width="383" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="dk0-08-OYS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess City " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQ4-QF-anJ">
+                                <rect key="frame" x="101" y="20" width="174" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hk-2P-ObJ">
+                                <rect key="frame" x="54" y="316" width="268" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="4fm-fY-4lA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="纽约"/>
+                                <connections>
+                                    <action selector="guessCity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nfT-3N-pJM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDq-YN-JCH">
+                                <rect key="frame" x="141" y="641" width="40" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEi-y5-tcS">
+                                <rect key="frame" x="-3" y="414" width="383" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="EJs-pL-LSA"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Uia-xa-Rje"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo8-G2-ciJ">
+                                <rect key="frame" x="189" y="640" width="54" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="AdM-m1-odd"/>
+                                    <constraint firstAttribute="height" constant="25" id="apJ-QY-KjO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HDq-YN-JCH" firstAttribute="top" secondItem="JEi-y5-tcS" secondAttribute="bottom" constant="11" id="3ZI-ZD-HwZ"/>
+                            <constraint firstAttribute="trailing" secondItem="mo8-G2-ciJ" secondAttribute="trailing" constant="128" id="4or-UN-P8q"/>
+                            <constraint firstItem="Q9d-P7-Rtk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="112" id="4zh-BG-O1R"/>
+                            <constraint firstItem="mo8-G2-ciJ" firstAttribute="centerY" secondItem="HDq-YN-JCH" secondAttribute="centerY" id="5oB-T4-a8M"/>
+                            <constraint firstItem="Q9d-P7-Rtk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5wi-Op-KS1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mo8-G2-ciJ" secondAttribute="bottom" constant="2" id="6oI-KP-BeI"/>
+                            <constraint firstItem="Q9d-P7-Rtk" firstAttribute="top" secondItem="qQ4-QF-anJ" secondAttribute="bottom" constant="8" id="7XW-h9-aXj"/>
+                            <constraint firstItem="mo8-G2-ciJ" firstAttribute="leading" secondItem="HDq-YN-JCH" secondAttribute="trailing" constant="8" symbolic="YES" id="AFi-av-hLa"/>
+                            <constraint firstItem="JEi-y5-tcS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-19" id="AtZ-pH-GQy"/>
+                            <constraint firstItem="6hk-2P-ObJ" firstAttribute="top" secondItem="Q9d-P7-Rtk" secondAttribute="bottom" constant="8" id="BTg-KU-KGw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HDq-YN-JCH" secondAttribute="bottom" constant="2" id="CVL-NN-DSh"/>
+                            <constraint firstItem="6hk-2P-ObJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="CXd-6k-TfI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mo8-G2-ciJ" secondAttribute="bottom" constant="8" id="FXN-ZP-8Ii"/>
+                            <constraint firstItem="mo8-G2-ciJ" firstAttribute="leading" secondItem="HDq-YN-JCH" secondAttribute="trailing" constant="8" id="KCw-3J-Znc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HDq-YN-JCH" secondAttribute="bottom" constant="8" id="Mpo-XV-JIl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6hk-2P-ObJ" secondAttribute="trailing" constant="37" id="WoC-pb-kBC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JEi-y5-tcS" secondAttribute="trailing" constant="-21" id="XHJ-XI-Ec0"/>
+                            <constraint firstItem="qQ4-QF-anJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="abu-jM-tKo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q9d-P7-Rtk" secondAttribute="trailing" constant="-20" id="bqv-yB-GwZ"/>
+                            <constraint firstItem="qQ4-QF-anJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dI6-zu-o6W"/>
+                            <constraint firstItem="HDq-YN-JCH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="125" id="dYL-VX-3Rg"/>
+                            <constraint firstItem="mo8-G2-ciJ" firstAttribute="leading" secondItem="HDq-YN-JCH" secondAttribute="trailing" constant="8" id="fMN-gp-cwR"/>
+                            <constraint firstItem="HDq-YN-JCH" firstAttribute="top" secondItem="JEi-y5-tcS" secondAttribute="bottom" constant="8" symbolic="YES" id="fPq-wM-FD1"/>
+                            <constraint firstItem="mo8-G2-ciJ" firstAttribute="top" secondItem="JEi-y5-tcS" secondAttribute="bottom" constant="10" id="huK-sS-3A6"/>
+                            <constraint firstItem="JEi-y5-tcS" firstAttribute="top" secondItem="6hk-2P-ObJ" secondAttribute="bottom" constant="8" id="mVB-bB-58j"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mo8-G2-ciJ" secondAttribute="bottom" constant="2" id="nUW-4G-Cjm"/>
+                            <constraint firstItem="6hk-2P-ObJ" firstAttribute="leading" secondItem="mo8-G2-ciJ" secondAttribute="leading" id="ozo-lw-Z1s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qQ4-QF-anJ" secondAttribute="trailing" constant="84" id="sMW-3c-BQl"/>
+                            <constraint firstItem="mo8-G2-ciJ" firstAttribute="top" secondItem="JEi-y5-tcS" secondAttribute="bottom" constant="8" symbolic="YES" id="vQr-h3-4v8"/>
+                            <constraint firstItem="mo8-G2-ciJ" firstAttribute="leading" secondItem="HDq-YN-JCH" secondAttribute="trailing" constant="4" id="wNV-xr-vvJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mo8-G2-ciJ" secondAttribute="trailing" constant="108" id="zxi-dl-qDA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ozo-lw-Z1s"/>
+                                <exclude reference="fPq-wM-FD1"/>
+                                <exclude reference="FXN-ZP-8Ii"/>
+                                <exclude reference="Mpo-XV-JIl"/>
+                                <exclude reference="4or-UN-P8q"/>
+                                <exclude reference="vQr-h3-4v8"/>
+                                <exclude reference="wNV-xr-vvJ"/>
+                                <exclude reference="zxi-dl-qDA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cityPicker" destination="JEi-y5-tcS" id="uKQ-lg-wdD"/>
+                        <outlet property="currentCityImage" destination="Q9d-P7-Rtk" id="LX0-Kd-o7Y"/>
+                        <outlet property="guessCityBtn" destination="6hk-2P-ObJ" id="8UH-Le-Ubm"/>
+                        <outlet property="scoreLabel" destination="mo8-G2-ciJ" id="b20-oP-Vy5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323.5" y="386.5"/>
+        </scene>
+    </scenes>
+</document>
